@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 
 const DB_NAME = 'bd_desafiogama3';
 const DB_USER = 'root';
-const DB_PASS = '';
+const DB_PASS = '121291';
 const DB_CONFIG = {
     dialect: 'mysql',
     host: 'localhost',

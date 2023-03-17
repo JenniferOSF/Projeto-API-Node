@@ -7,7 +7,7 @@ export const findOneAtendimentoById = async (req, res) => {
     const atendimento = await findAtendimentoById(id)
 
     if (!atendimento) {
-        return res.status(404).json({ mesage: 'NOT FOUND' })
+        return res.status(404).json({ message: 'NOT FOUND' })
     }
 
     return res.status(200).json({ atendimento });

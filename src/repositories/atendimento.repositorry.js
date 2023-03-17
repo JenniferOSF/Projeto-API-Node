@@ -1,4 +1,5 @@
 import { Atendimento } from "../database/Models/atenddimento.model.js"
+import { randomUUID } from "node:crypto";
 
 export const findAtendimentoById = async (id) => {
     const atendimento = await Atendimento.findOne({ where: { id } })
@@ -10,7 +11,7 @@ export const findAllAtendimentoRepository = async () => {
 }
 
 export const createAtendimentoRepositpry = async (DATA_ATENDIMENTO, OBSERVACAO, PSICOLOGO_ID, paciente_ID) => {
-    return await Atendimento.create({ DATA_ATENDIMENTO, OBSERVACAO, PSICOLOGO_ID, paciente_ID })
+    return await Atendimento.create({ DATA_ATENDIMENTO, OBSERVACAO, PSICOLOGO_ID, paciente_ID, id: randomUUID() })
 }
 
 export const updateAtendimentoRepository = async (id, DATA_ATENDIMENTO, OBSERVACAO, PSICOLOGO_ID, paciente_ID) => {
